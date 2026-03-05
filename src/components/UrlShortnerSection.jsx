@@ -1,7 +1,54 @@
 //UrlShortnerHook 
+import { useState } from 'react'
+
+function UrlShortner(){
+
+  const [inputUrl,setInputUrl] = useState('')
+  const [shortendUrl, setShortendUrl] = useState([])
+
+  const handleSubmit = (e) => {
+    console.log("lets make pancakes (link shortner clicked)")
+    e.preventDefault()
+    setShortendUrl([...shortendUrl,inputUrl])
+    setInputUrl("")
+
+    fetch('https://spoo.me/api/v1/shorten',{
+      method:"POST",
+      headers: {
+        authorization: `bearer ${API_KEY}`
+      },
+    body: JSON.stringify({
+        long_url: urlInput
+      })
+    })
+    .then(res => res.json())
+    .then(res => console.log(res))
+    .catch(err => console.error(err));
+    console.log("fetching data", shortendUrl)
+  }
+  
 
 
+  return(
+    <>
+      <div style={{width:"500px", border:"2px solid black"}}>
+        <p>Shorten Section Here</p>
+          <form onSubmit={handleSubmit}>
+            <input type="url" id="url" placeholder="Shorten a link here..." 
+              value={inputUrl} onChange={(e) => setInputUrl(e.target.value)} required/>
+            <button id="shortenItBtn" type="submit">Shorten It!</button> 
+          </form>
+          <div id="shortnedUrl">
+            <ul>
+              { shortendUrl && (shortendUrl.map(url => <li key={url}> {url} </li>))}
+            </ul>
+          </div>
+      </div>
+    </>
+  );
+}
 
+export default UrlShortner
 
 //<div id="space">
 //<div class="container" id="urlSection">
@@ -11,3 +58,99 @@
 // </div>
 //<ul id="links"></ul>
 //</div>
+
+// // fetch('https://spoo.me/api/v1')
+// import {API_KEY} from "./secret.js"
+
+// const shortenItBtn = document.getElementById("shortenItBtn");
+// const links = document.getElementById("links");
+  
+// shortenItBtn.addEventListener("click", shortenLink);
+
+// async function shortenLink(){
+//   let urlInput = document.getElementById("url").value.trim();
+//   console.log("Short Stack coming up");
+
+//   if (urlInput === ""){
+//     alert ("please enter a url")
+//     return;
+//   }
+
+//   try { 
+//   const response = await
+//   fetch ("https://spoo.me/api/v1/shorten", {
+//     method: 'POST',
+//     headers: {
+//         "Content-Type": "application/json",
+//         authorization: `bearer ${API_KEY}`
+//     },
+//     body: JSON.stringify({
+//         long_url: urlInput
+//     })
+  
+// });
+
+//   const data = await response.json();
+
+//   console.log("API fetch status:", data);
+
+//   const shortUrl = data.short_url || data.shorturl;
+
+//   const storedLinks = JSON.parse(localStorage.getItem("links")) || [];
+
+//   storedLinks.push({
+//     original:urlInput,
+//     short:shortUrl,
+//   })
+
+//   localStorage.setItem("links",JSON.stringify(storedLinks));
+
+//   renderLinks();
+
+//   }
+//   catch (error){
+//     console.error("Failed to shorten links:",error)
+//     alert("Problems in the kitchen!")
+//   }
+// }
+
+// // This is what adds li under the URL maker container, within the #space div ((Need to figure out how to add both original and shortened))
+// function renderLinks() {
+//   const linkShort = JSON.parse(localStorage.getItem("links")) || [];
+//   links.innerText = "";
+
+//   linkShort.forEach((link,index) => {
+//     const li = document.createElement("li");
+//     li.dataset.index = index;
+
+//     console.log(link.short)
+
+//     const a = document.createElement("a");
+//     a.href = link.short;
+//     a.innerText = link.short;
+//     a.target = "_blank";
+
+// li.appendChild(a)
+
+//   const copyBtn = document.createElement("button");
+//   copyBtn.innerText ="Copy";
+
+//   copyBtn.addEventListener("click", () => {
+//     const copyLink = a.innerText;
+//     navigator.clipboard.writeText(copyLink)
+//     // if (copyBtn.innerText === "Copy") { // need to figure out how to change the innerText of button to say COPIED
+//     //   copyBtn.innerText === "Copied";
+//     // }
+
+//     alert("Copied the text: " + copyLink);
+
+//     console.log("link copied")
+//   });
+
+//   li.appendChild(copyBtn)
+
+//   links.append(li)
+// })
+// }
+// renderLinks();
+// console.log("Link added")
