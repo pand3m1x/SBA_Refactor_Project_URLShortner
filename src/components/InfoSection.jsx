@@ -5,7 +5,7 @@ import fullyCustomizable from '../assets/icon-fully-customizable.svg'
 function InfoSection(){
 
   return(
-    <><div id="infoSection" style={{backgroundColor:"hsl(257, 7%, 63%)", margin:"-10px"}}>
+    <><div id="infoSection" style={{backgroundColor:"hsl(257, 7%, 63%)", marginTop:"-10px"}}>
         <div id="adInfo" style={{display:"flex", alignContent:"center"}}>
           <h2>Advanced Statistics</h2>
 

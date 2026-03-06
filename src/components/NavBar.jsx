@@ -6,13 +6,13 @@ function NavBar(){
     <>
       <div id="topNav" style={{ backgroundColor:"white" }}>
         <nav>
-          <ul id="leftMenuItems">
+          <ul id="leftMenuItems" style={{marginRight:"100px"}}>
             <li id="logo"><strong>Short Stack</strong></li>
             <li><a href="#">Features</a></li>
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Resources</a></li>
           </ul>
-          <ul id="rightMenuItems">
+          <ul id="rightMenuItems" style={{marginLeft:"100px"}}>
             <li><a href="#">Log In</a></li>
             <li><button id="signUp">Sign Up</button></li>
           </ul>
