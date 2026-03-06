@@ -16,7 +16,7 @@ function UrlShortner(){
           alert("Recipe Copied!")
       } catch (err) {
           console.error('Failed to copy text: ', err);
-          alert("Couldn't copy the recipe")
+          alert("Couldn't copy the recipe..")
       }
     };
 
@@ -47,13 +47,9 @@ function UrlShortner(){
     .catch(err => console.error(err));
   }
   
-
-
-
   return(
     <>
       <div style={{width:"700px", border:"2px solid black"}}>
-        <p>Shorten Section Here</p>
           <form onSubmit={handleSubmit}>
             <input type="url" id="url" placeholder="Shorten a link here..." 
               value={inputUrl} onChange={(e) => setInputUrl(e.target.value)} style={{width:"400px"}} required/>

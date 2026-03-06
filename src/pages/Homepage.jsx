@@ -7,6 +7,7 @@
 // FootNav 
 
 import NavBar from '../components/NavBar'
+import HeroSection from '../components/HeroSection'
 import UrlShortner from '../components/UrlShortnerSection'
 
 function Homepage(){
@@ -15,7 +16,7 @@ function Homepage(){
 
     <>
       <NavBar></NavBar>
-      <h1>Short Stack</h1>
+      <HeroSection></HeroSection>
       <UrlShortner></UrlShortner>
     </>
   );

@@ -4,14 +4,309 @@ nav{
   justify-content: flex-start;
 }
 
-/* #root {
+ #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-.logo {
+
+/* Design Info  */
+
+/* consistent code for whole project */
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* :root{ for later, add root to stuff
+  --purple: hsl(260, 8%, 14%);
+} */
+
+body {
+  background-color: rgb(255, 255, 255);
+  color: hsl(260, 8%, 14%);
+}
+
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 10px; /*top/bottom left/right*/
+}
+
+ul{
+  list-style: none;
+  margin: 10px 10px; /*top/bottom left/right*/
+}
+
+a {
+  text-decoration: none;
+}
+button{
+  background-color: hsl(180, 66%, 49%);
+  color: white;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 20px;
+  border-style:none;
+}
+
+button:hover{
+  background-color: rgb(255, 217, 0);
+}
+
+h1, h2, h3 {
+  margin: 25px 0 10px 0px; /* Top: px, Right: px, Bottom: px, Left: px */
+}
+
+/* Specific Parts of HTML/Java edits */
+
+#topNav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  color: hsl(260, 8%, 14%);
+  padding: 0 20px;
+}
+
+#topNav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+#topNav li {
+  padding: 5px 10px;
+}
+
+#topNav a {
+  color: hsl(260, 8%, 14%);
+}
+
+#topNav a:hover{
+  color: rgb(255, 217, 0);
+}
+
+#topNav p {
+  padding: 5px 10px;
+}
+
+#topNav #upNavLeft {
+  display: flex;
+  justify-items: left;
+}
+
+#topNav #upNavRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+#bottomNav{
+  background-color: hsl(260, 8%, 14%);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 20px 30px 20px; /* Top: px, Right: px, Bottom: px, Left: px */
+  max-width: 1000px;
+  margin: auto;
+}
+
+#heroInfo{
+  padding: auto;
+  width: 600px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+#bodyImage{
+  width: 600px;
+}
+
+#space { /*parent to .container*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+  margin: -85px 0 20px 0px; /* Top: px, Right: px, Bottom: px, Left: px */
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: space-between;
+  background-color: hsl(257, 27%, 26%);
+  padding: 10px;
+  border: 2px solid black;
+  width: 600px;
+  border-radius: 10px;
+}
+
+input {
+  width: 400px;
+  padding: 10px 10px;
+  margin: 10px 5px 10px 5px;  /* Top: px, Right: px, Bottom: px, Left: px */
+  border-radius: 5px;
+}
+
+#links {
+  width: 600px;
+  margin-top: 20px;
+}
+
+#links li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  margin: 25px;
+  border-radius: 10px;
+}
+
+#links a {
+  color: black;
+}
+
+#links button:active { /*change copy button color */
+  background-color:hsl(260, 8%, 14%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsla(258, 7%, 63%, 0.334);
+  color: hsl(260, 8%, 14%);
+  padding: 50px 50px;
+}
+
+#adInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  width: 400px;
+}
+
+#gridContainer{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.infoStats {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: hsl(260, 8%, 14%);
+  width: 300px;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+
+.tlImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(257, 27%, 26%);
+  border-radius: 100px;
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  margin: -50px 0 2px 10px; /* Top: px, Right: px, Bottom: px, Left: px */
+}
+
+#getStarted{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(257, 27%, 26%);
+  color: white;
+  height: 200px;
+}
+
+
+#shortenItBtn {
+  border-radius: 10px;
+}
+
+
+#getStarted {
+  justify-content: center;
+  padding: 0 50px;
+}
+
+
+#bottomNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15 20px;
+  height: 80%;
+}
+
+#bottomNav a {
+  color: white;
+}
+
+#bottomNav a:hover {
+  color: hsl(180, 66%, 49%);
+}
+
+#socialMediaBar img {
+  margin: 5px;
+}
+
+#socialMediaBar img:hover{
+  background-color: hsl(180, 66%, 49%);
+}
+
+/* #bottomNav .notHeader {
+  font-size: 1rem;
+} */
+/* .poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+} */
+
+/* Make media query for smaller screens 
+
+
+/*.logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
