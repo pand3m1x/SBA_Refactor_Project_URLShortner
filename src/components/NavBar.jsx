@@ -4,7 +4,7 @@ function NavBar(){
 
   return(
     <>
-      <div id="topNav" style={{border:"2px solid yellow", backgroundColor:"white"}}>
+      <div id="topNav" style={{ backgroundColor:"white" }}>
         <nav>
           <ul id="leftMenuItems">
             <li id="logo"><strong>Short Stack</strong></li>

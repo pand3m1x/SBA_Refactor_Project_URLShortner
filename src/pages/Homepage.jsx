@@ -9,6 +9,7 @@
 import NavBar from '../components/NavBar'
 import HeroSection from '../components/HeroSection'
 import UrlShortner from '../components/UrlShortnerSection'
+import InfoSection from '../components/InfoSection';
 
 function Homepage(){
 
@@ -18,6 +19,7 @@ function Homepage(){
       <NavBar></NavBar>
       <HeroSection></HeroSection>
       <UrlShortner></UrlShortner>
+      <InfoSection></InfoSection>
     </>
   );
 }
