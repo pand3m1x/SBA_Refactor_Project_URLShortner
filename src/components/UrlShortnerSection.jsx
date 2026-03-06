@@ -2,6 +2,7 @@
 import { useState } from 'react'
 
 function UrlShortner(){
+  const API_KEY = import.meta.env.BASE_URL
 
   const [inputUrl,setInputUrl] = useState('')
   const [shortendUrl, setShortendUrl] = useState([])
@@ -10,21 +11,25 @@ function UrlShortner(){
     console.log("lets make pancakes (link shortner clicked)")
     e.preventDefault()
     setShortendUrl([...shortendUrl,inputUrl])
-    setInputUrl("")
+    console.dir(shortendUrl)
+    console.log(inputUrl)
 
     fetch('https://spoo.me/api/v1/shorten',{
       method:"POST",
       headers: {
-        authorization: `bearer ${API_KEY}`
+        Authorization: `Bearer ${API_KEY}`,
+        "Content-Type": 'application/json'
       },
     body: JSON.stringify({
-        long_url: urlInput
+        long_url: inputUrl
       })
     })
     .then(res => res.json())
-    .then(res => console.log(res))
+    .then(res => {
+      console.log("fetching data", shortendUrl)
+      setInputUrl("")
+      console.log(res)})
     .catch(err => console.error(err));
-    console.log("fetching data", shortendUrl)
   }
   
 
@@ -40,7 +45,7 @@ function UrlShortner(){
           </form>
           <div id="shortnedUrl">
             <ul>
-              { shortendUrl && (shortendUrl.map(url => <li key={url}> {url} </li>))}
+              { shortendUrl && (shortendUrl.map(url => <li key={url}> {shortendUrl} </li>))}
             </ul>
           </div>
       </div>
