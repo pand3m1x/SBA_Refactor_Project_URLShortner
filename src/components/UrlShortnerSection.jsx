@@ -10,7 +10,7 @@ function UrlShortner(){
   const handleSubmit = (e) => {
     console.log("lets make pancakes (link shortner clicked)")
     e.preventDefault()
-    setShortendUrl(prev => [...prev,inputUrl])
+    setShortendUrl(prev => [...prev]) 
     console.dir("What does this do? 1",shortendUrl)
     console.log("What does this do? 2",inputUrl)
 
@@ -27,8 +27,8 @@ function UrlShortner(){
     .then(res => res.json())
     .then(res => {
       console.log("fetching data", shortendUrl)
-      
-      setShortendUrl([...shortendUrl,res.short_url])
+
+      setShortendUrl([...shortendUrl,res.short_url]) 
       setInputUrl("")
       console.log(res)})
     .catch(err => console.error(err));
@@ -42,13 +42,12 @@ function UrlShortner(){
         <p>Shorten Section Here</p>
           <form onSubmit={handleSubmit}>
             <input type="url" id="url" placeholder="Shorten a link here..." 
-              value={inputUrl} onChange={(e) => setInputUrl(e.target.value)} required/>
+              value={inputUrl} onChange={(e) => setInputUrl(e.target.value)} style={{width:"400px"}} required/>
             <button id="shortenItBtn" type="submit">Shorten It!</button> 
           </form>
           <div id="shortnedUrl">
-            <ul>
-              { shortendUrl && (shortendUrl.map(url => <li key={url}> {url} </li>))} 
-              <button>copy</button>
+            <ul style={{listStyle:"none"}}>
+              {shortendUrl.map((url,index) => (<li key={index}> { url } <button>copy</button></li>))}
             </ul>
           </div>
       </div>
@@ -57,6 +56,18 @@ function UrlShortner(){
 }
 
 export default UrlShortner
+
+// Url Shortner Documentation
+// https://docs.spoo.me/api-reference/url-shortening/create-shortened-url
+//
+// Array Documentation 
+// https://react.dev/learn/updating-arrays-in-state
+//
+// I found another cool react feature (Copy)
+// https://coderpad.io/blog/development/how-to-build-a-url-shortener-in-react-with-shrtcode/
+//
+// Console Logging
+// https://developer.chrome.com/docs/devtools/console/reference
 
 //<div id="space">
 //<div class="container" id="urlSection">
