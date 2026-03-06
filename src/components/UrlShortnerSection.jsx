@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 function UrlShortner(){
-  const API_KEY = import.meta.env.BASE_URL
+  const API_KEY = import.meta.env.VITE_API_KEY
 
   const [inputUrl,setInputUrl] = useState('')
   const [shortendUrl, setShortendUrl] = useState([])
@@ -10,9 +10,9 @@ function UrlShortner(){
   const handleSubmit = (e) => {
     console.log("lets make pancakes (link shortner clicked)")
     e.preventDefault()
-    setShortendUrl([...shortendUrl,inputUrl])
-    console.dir(shortendUrl)
-    console.log(inputUrl)
+    setShortendUrl(prev => [...prev,inputUrl])
+    console.dir("What does this do? 1",shortendUrl)
+    console.log("What does this do? 2",inputUrl)
 
     fetch('https://spoo.me/api/v1/shorten',{
       method:"POST",
@@ -21,12 +21,14 @@ function UrlShortner(){
         "Content-Type": 'application/json'
       },
     body: JSON.stringify({
-        long_url: inputUrl
+        long_url: inputUrl,
       })
     })
     .then(res => res.json())
     .then(res => {
       console.log("fetching data", shortendUrl)
+      
+      setShortendUrl([...shortendUrl,res.short_url])
       setInputUrl("")
       console.log(res)})
     .catch(err => console.error(err));
@@ -36,7 +38,7 @@ function UrlShortner(){
 
   return(
     <>
-      <div style={{width:"500px", border:"2px solid black"}}>
+      <div style={{width:"700px", border:"2px solid black"}}>
         <p>Shorten Section Here</p>
           <form onSubmit={handleSubmit}>
             <input type="url" id="url" placeholder="Shorten a link here..." 
@@ -45,7 +47,8 @@ function UrlShortner(){
           </form>
           <div id="shortnedUrl">
             <ul>
-              { shortendUrl && (shortendUrl.map(url => <li key={url}> {shortendUrl} </li>))}
+              { shortendUrl && (shortendUrl.map(url => <li key={url}> {url} </li>))} 
+              <button>copy</button>
             </ul>
           </div>
       </div>
