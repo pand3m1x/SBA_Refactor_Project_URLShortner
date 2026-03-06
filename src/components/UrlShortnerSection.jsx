@@ -49,7 +49,7 @@ function UrlShortner(){
   
   return(
     <>
-      <div style={{width:"700px", border:"2px solid black"}}>
+      <div style={{width:"700px", height:"80px", borderRadius:"10px", backgroundColor:"hsl(257, 27%, 26%)", padding:"10px"}}>
           <form onSubmit={handleSubmit}>
             <input type="url" id="url" placeholder="Shorten a link here..." 
               value={inputUrl} onChange={(e) => setInputUrl(e.target.value)} style={{width:"400px"}} required/>
