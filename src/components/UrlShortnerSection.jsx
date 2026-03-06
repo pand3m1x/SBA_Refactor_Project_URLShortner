@@ -68,7 +68,9 @@ export default UrlShortner
 //
 // Console Logging
 // https://developer.chrome.com/docs/devtools/console/reference
-
+//
+// I'm not doing anything extra yet, but more documentation (for Toasty)
+// https://fkhadra.github.io/react-toastify/introduction/
 
 //<div id="space">
 //<div class="container" id="urlSection">
