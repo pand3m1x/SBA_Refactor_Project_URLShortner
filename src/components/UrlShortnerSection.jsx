@@ -6,6 +6,19 @@ function UrlShortner(){
 
   const [inputUrl,setInputUrl] = useState('')
   const [shortendUrl, setShortendUrl] = useState([])
+  const [copied, setCopied] = useState(false)
+
+  const copyToClipboard = async () => {
+      try {
+          await navigator.clipboard.writeText(shortendUrl);
+          setCopied(true);
+          setTimeout(() => setCopied(false), 2000);
+          alert("Recipe Copied!")
+      } catch (err) {
+          console.error('Failed to copy text: ', err);
+          alert("Couldn't copy the recipe")
+      }
+    };
 
   const handleSubmit = (e) => {
     console.log("lets make pancakes (link shortner clicked)")
@@ -36,6 +49,7 @@ function UrlShortner(){
   
 
 
+
   return(
     <>
       <div style={{width:"700px", border:"2px solid black"}}>
@@ -47,7 +61,7 @@ function UrlShortner(){
           </form>
           <div id="shortnedUrl">
             <ul style={{listStyle:"none"}}>
-              {shortendUrl.map((url,index) => (<li key={index}> { url } <button>copy</button></li>))}
+              {shortendUrl.map((url,index) => (<li key={index}> { url } <button onClick={()=>copyToClipboard(url)}>copy</button></li>))}
             </ul>
           </div>
       </div>
@@ -63,8 +77,10 @@ export default UrlShortner
 // Array Documentation 
 // https://react.dev/learn/updating-arrays-in-state
 //
-// I found another cool react feature (Copy)
+// I found another cool react feature (Copy) // Error this is outdated, but it looked like fun, 
+// I will use normal coding method
 // https://coderpad.io/blog/development/how-to-build-a-url-shortener-in-react-with-shrtcode/
+// https://medium.com/@plsreeparvathy/copy-to-clipboard-feature-with-react-and-mui-065afa55f866 (This works)
 //
 // Console Logging
 // https://developer.chrome.com/docs/devtools/console/reference
