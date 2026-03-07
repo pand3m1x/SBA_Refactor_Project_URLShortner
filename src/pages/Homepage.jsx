@@ -11,6 +11,7 @@ import HeroSection from '../components/HeroSection';
 import UrlShortner from '../components/UrlShortnerSection';
 import InfoSection from '../components/InfoSection';
 import StartTodaySection from '../components/StartTodaySection';
+import FootNav from '../components/FootNav';
 
 function Homepage(){
 
@@ -22,6 +23,7 @@ function Homepage(){
       <UrlShortner></UrlShortner>
       <InfoSection></InfoSection>
       <StartTodaySection></StartTodaySection>
+      <FootNav></FootNav>
     </>
   );
 }

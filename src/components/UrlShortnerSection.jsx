@@ -59,7 +59,7 @@ function UrlShortner(){
           </form>
           <div id="shortnedUrl">
             <ul style={{listStyle:"none"}}>
-              {shortendUrl.map((url,index) => (<li key={index}> { url } 
+              {shortendUrl.map((url,index) => (<li key={index} style={{backgroundColor:"white"}}> { url } 
                 <button onClick={()=>copyToClipboard(url)}>copy</button></li>))}
             </ul>
           </div>
