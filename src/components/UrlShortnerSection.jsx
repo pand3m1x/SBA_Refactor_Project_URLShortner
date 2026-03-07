@@ -1,5 +1,5 @@
 //UrlShortnerHook 
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 
 function UrlShortner(){
   const API_KEY = import.meta.env.VITE_API_KEY
@@ -7,6 +7,8 @@ function UrlShortner(){
   const [inputUrl,setInputUrl] = useState('')
   const [shortendUrl, setShortendUrl] = useState([])
   const [copied, setCopied] = useState(false)
+
+
 
   const copyToClipboard = async () => {
       try {
@@ -23,8 +25,7 @@ function UrlShortner(){
   const handleSubmit = (e) => {
     console.log("lets make pancakes (link shortner clicked)")
     e.preventDefault()
-    setShortendUrl(prev => [...prev]) 
-    console.dir("What does this do? 1",shortendUrl)
+    console.dir("What does this do? 1",shortendUrl) //did I break this?
     console.log("What does this do? 2",inputUrl)
 
     fetch('https://spoo.me/api/v1/shorten',{
@@ -41,12 +42,41 @@ function UrlShortner(){
     .then(res => {
       console.log("fetching data", shortendUrl)
 
-      setShortendUrl([...shortendUrl,res.short_url]) 
+      setShortendUrl(prev => [...prev,res.short_url]) 
       setInputUrl("")
       console.log(res)})
     .catch(err => console.error(err));
   }
+//   const storedLinks = JSON.parse(localStorage.getItem("links")) || [];
+
+//   storedLinks.push({
+//     original:urlInput,
+//     short:shortUrl,
+//   })
+
+//   localStorage.setItem("links",JSON.stringify(storedLinks));
+
+//   renderLinks();
+
+// https://react.dev/reference/react/useState#avoiding-recreating-the-initial-state
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+// https://stackoverflow.com/questions/61178240/useeffect-does-not-listen-for-localstorage
+
+  useEffect(() =>{
+    const storedLinks = localStorage.getItem("shortendUrl")
+    console.log("Going to the kitchen")
+
+  if(storedLinks) {
+    setShortendUrl(JSON.parse(storedLinks))
+   }
+  }, []);
   
+  useEffect(() => {
+    console.log("Putting things into the fridge", shortendUrl)
+    localStorage.setItem("shortendUrl", JSON.stringify(shortendUrl))
+    console.log("Digging through the fridge")
+  }, [shortendUrl]);
+
   return(
     <>
       <div style={{width:"700px", height:"80px", borderRadius:"10px", 
