@@ -5,7 +5,8 @@ import fullyCustomizable from '../assets/icon-fully-customizable.svg'
 function InfoSection(){
 
   return(
-    <><div id="infoSection" style={{backgroundColor:"hsl(257, 7%, 63%)", marginTop:"-10px"}}>
+    <>
+      <div id="infoSection" style={{backgroundColor:"hsl(257, 7%, 63%)"}}>
         <div id="adInfo" style={{display:"flex", alignContent:"center"}}>
           <h2>Advanced Statistics</h2>
 
@@ -57,7 +58,17 @@ export default InfoSection
 
 
 
-{/* <div id="adInfo">
+{/*
+  <main>
+    <div id="space">
+    <div class="container" id="urlSection">
+    <input type="text" id="url" placeholder="Shorten a link here..." required>
+
+      <button id="shortenItBtn">Shorten It!</button>
+    </div>
+    <ul id="links"></ul>
+  </div>
+     <div id="adInfo">
       <h2>Advanced Statistics</h2>
 
       <p>Track how your links are performing across the web with our 

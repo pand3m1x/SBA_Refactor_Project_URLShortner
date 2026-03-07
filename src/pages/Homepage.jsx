@@ -1,10 +1,10 @@
 
-// NavBar
-// HeroSection
-// UrlShortner 
-// InfoSection
-// StartTodaySection 
-// FootNav 
+// NavBar [x]
+// HeroSection [x]
+// UrlShortner [x]
+// InfoSection [x]
+// StartTodaySection [x] 
+// FootNav [x]
 
 import NavBar from '../components/NavBar';
 import HeroSection from '../components/HeroSection';

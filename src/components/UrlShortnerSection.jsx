@@ -50,7 +50,7 @@ function UrlShortner(){
   return(
     <>
       <div style={{width:"700px", height:"80px", borderRadius:"10px", 
-                  backgroundColor:"hsl(257, 27%, 26%)", padding:"10px"}}>
+                  backgroundColor:"hsl(257, 27%, 26%)", padding:"10px", marginBottom:"100px"}}>
           <form onSubmit={handleSubmit}>
             <input type="url" id="url" placeholder="Shorten a link here..." 
                     value={inputUrl} onChange={(e) => setInputUrl(e.target.value)} 
@@ -59,7 +59,7 @@ function UrlShortner(){
           </form>
           <div id="shortnedUrl">
             <ul style={{listStyle:"none"}}>
-              {shortendUrl.map((url,index) => (<li key={index} style={{backgroundColor:"white"}}> { url } 
+              {shortendUrl.map((url,index) => (<li key={index}> { url } 
                 <button onClick={()=>copyToClipboard(url)}>copy</button></li>))}
             </ul>
           </div>
