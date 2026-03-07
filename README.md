@@ -1,16 +1,58 @@
-# React + Vite
+The working website (Demo)!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    shortstack-react.netlify.app
 
-Currently, two official plugins are available:
+Write a 200-300 word reflection discussing your development process, challenges faced, solutions implemented, and potential improvements.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    Well, the API was a little confusing, but with some help at Quinns office hour I was able to get it figured
+    out. Gotta really remember to inspect documentation more clearly. Also, I was worried about deploying, but
+    today at Jades office hour I got a nice crash course on deploying things with the .env.  So that was pretty 
+    Exciting. 
 
-## React Compiler
+    Other than that, I realized... that I don't think I ever implimented localstorage correctly in the task manager
+    app, so why I was trying to figure it out here, couldn't use that as a reference point. So I looked around, but
+    I'm still not getting the links to save on refresh.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+    I also didn't manage to add the original link with the URL, which I struggled with on the previous version as well.
 
-## Expanding the ESLint configuration
+    I was mostly able to divide the previous code to where I thought it needed to be. But, I think I need the UrlShortner 
+    inside of the InfoSection so I can properly style it. Other than that, the website mostly looks like the previous iteration.  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+Additional Readings
+
+    In the UrlSection for later review to try and fix some things
+
+
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    
+Thank you!⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠤⠲⢉⡽⢈⣠⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠎⢀⠄⢢⠫⡀⠸⣇⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠃⡠⠃⠀⡇⠀⠱⠀⠀⠀⠉⠒⠤⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠤⠋⢀⠇⠀⠀⠱⡀⠀⠑⢄⠀⠈⠐⠒⠤⡀⠑⢦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⣜⣻⣿⠿⠃⠠⠜⠃⠀⠀⠀⠀⠘⢄⡀⠀⠛⠤⠀⠀⠀⠘⡄⣸⣧⣘⡠⠤⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡠⢤⢲⠽⣿⣿⡿⠁⡄⠀⠀⠀⢀⠡⢄⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⢈⣿⣿⣿⣿⣿⣶⣬⣑⡠⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢤⠲⣍⡾⢣⢋⡕⣊⠿⡇⠀⣧⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣷⣦⣑⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢠⢊⢧⣋⢛⣥⣲⣥⣮⣴⣵⣾⣧⠀⢣⠱⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣮⣂⠄⡀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢠⢧⣛⣴⣾⣿⡿⣿⣿⢿⣿⡿⣿⣿⣷⣄⣀⠈⠢⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣬⢦⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢸⠘⣿⣿⣯⣷⣿⢿⣾⡿⣟⣿⣟⣯⣿⣿⣿⣿⣶⣶⣶⣤⣤⣀⣀⡀⠀⠀⠀⠀⢀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢾⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⡼⣆⢹⣿⣿⢷⣿⣻⣯⠿⣛⠫⠭⡍⡭⢭⣙⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠋⡇⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣰⣍⣶⠛⣄⠙⠻⢿⡛⠍⣆⠳⢌⢣⠓⣬⠱⢦⡩⢝⡲⣌⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⢁⡔⢠⠇⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⡟⣷⢣⠘⡄⣓⢄⡀⠉⠳⢬⣚⣌⡲⣉⠦⣋⢖⡩⢎⡵⢊⠷⣡⢿⣿⣿⣯⣿⣿⣿⡿⣿⣿⡿⣿⢿⡿⣿⢿⡿⣿⢿⣿⡿⠿⠛⠁⠀⠀⡎⣀⠎⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢧⠸⣇⠎⡰⢌⢊⡙⠲⣄⡀⠀⠈⠉⠉⠛⠚⠒⠛⠚⠒⠛⠓⠓⠚⢿⡿⣿⣿⣿⣿⣿⣏⣷⣹⡮⠷⠽⠾⠗⠛⠋⠉⠀⠀⠀⠀⠀⢀⣠⣿⠟⡆⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⠀⠙⢆⡱⣈⠦⣉⠳⢄⢫⠱⠦⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡽⣖⡳⣞⢶⣳⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣠⣴⣶⢿⡿⠋⠀⡆⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠘⡆⠀⡀⠑⢦⡒⠥⡚⣌⠲⣉⠞⣰⠪⡝⢭⡓⢶⡒⣖⠲⣖⢲⢖⡺⣿⣷⣿⣾⣷⣿⣿⣤⣤⣤⣤⣤⢶⣶⢻⡟⡿⢯⡿⣽⣳⣯⠟⠁⡔⡀⡇⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠙⣤⡈⠀⠀⠉⠓⠵⣌⡓⡌⡎⢥⡓⡜⡣⢞⡡⢏⡜⡳⢬⣋⢮⣕⢫⣝⣻⣛⢿⡹⢧⡳⣞⢶⡹⣎⠿⣜⣻⣼⣛⣯⢷⣯⠗⠋⢠⠞⡴⡯⣅⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢀⠄⠊⢡⣿⣶⣄⠀⠀⠀⠈⠉⠓⠺⢥⣎⡵⣙⢬⠳⣩⢞⡱⢫⡜⡖⢮⣓⠾⣔⢯⣚⡽⣣⢟⡼⣣⡟⣭⠿⣭⣳⣞⡽⠞⠋⠁⠀⠀⣸⠾⡳⢦⡄⠱⢠⠀⠀⠀⠀
+⠀⢀⡔⠁⠀⠀⣿⣿⢯⣟⣷⣦⣄⣀⠀⠀⠀⠀⠀⠈⠉⠉⠓⠓⠚⠓⠓⠛⠞⢣⣿⢾⡿⣾⢷⡿⣿⢿⡿⣿⢿⡿⣿⡿⠉⠁⠀⠀⢀⣠⠖⣫⠡⢒⡉⠳⣽⡀⠀⠑⢀⠀⠀
+⢠⠏⢠⠎⠀⠸⡿⣿⣿⣞⣷⡻⡾⣽⣻⢶⣦⢤⣤⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠘⠻⠷⠿⠾⠷⢯⣽⢾⡽⠛⠋⠛⠋⢁⣀⡤⢴⡚⡍⢆⡓⠤⢃⠥⢨⣱⠏⠀⠈⢢⠈⢣⠀
+⠛⢨⡇⠀⠀⠀⢣⠉⢻⣾⢳⣿⣽⢳⣽⡞⣵⢻⡜⢳⣯⣽⠛⣿⠛⡟⢻⢳⡞⣶⣶⡖⣶⠒⣶⠒⣿⣿⢲⠒⣶⠛⣭⠋⣦⢱⢢⢱⠘⣦⠘⠑⠊⡜⣶⠃⡆⠀⠀⠀⠃⠐⡆
+⣻⠙⡄⠀⠀⠀⠈⠣⡄⠈⠙⠺⢷⣯⣗⣻⡭⣷⢻⡝⣮⢳⡻⣜⢯⡝⣧⢻⠼⣱⢎⡵⢣⣛⣴⣻⣼⣿⣿⣜⣦⣷⣼⣾⣾⣦⢉⡆⢳⡈⢖⣩⠶⠋⠀⢠⠃⠀⠀⠀⡘⠀⡇
+⠸⣤⠐⡄⠀⠀⠀⠀⠈⢦⣑⠠⠀⡀⠈⠉⠛⠺⠷⣯⣳⣏⡷⣹⢮⡝⣮⠽⣭⠳⢮⣙⠧⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣏⡶⡬⠗⠚⢉⠀⠀⣀⠔⠁⠀⠀⠀⡰⠁⣸⠁
+⠀⠈⢆⠈⠢⡀⠀⠀⠀⠀⠀⠉⠒⠦⢄⣀⠒⠠⠄⠀⠀⠈⠉⠉⠛⠚⠓⠻⠶⠯⠷⠭⠾⠥⠯⠯⠿⠿⣷⠟⠛⠛⠉⣉⣥⣴⣶⣾⣿⣿⣿⣿⠋⠀⠀⠀⠀⣀⠔⠀⡰⠁⠀
+⠀⠀⠀⠑⢤⠈⠒⠄⡀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠒⠒⠦⠤⠤⣀⣀⣀⣀⡀⠀⠀⢀⣤⣤⣤⣤⣤⣤⣴⢿⣶⣶⡾⣿⠿⣟⣻⢻⣽⣹⠾⠋⠁⠀⠀⢀⠤⠊⢀⡴⠋⠀⠀⠀
+⠀⠀⠀⠀⠀⠈⠒⢄⡈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠘⢥⣈⣆⣑⣪⣑⣎⣭⣓⣬⠷⠼⠿⠚⠋⠉⠀⠀⠀⠀⠀⠀⠈⣀⠤⠚⠉⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠒⠠⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡠⠔⠚⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠑⠐⠢⠤⠤⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣤⠤⠦⠶⠒⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠁⠉⠈⠁⠉⠈⠁⠈⠁⠁⠈⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
